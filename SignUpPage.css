@@ -1,0 +1,216 @@
+@font-face {
+    font-family: "InriaSans";
+    src: url("./assets/fonts/InriaSans-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+html{
+    height: 100%;
+}
+
+body{
+    background: #190404B2;
+    background: linear-gradient(90deg, rgba(25, 4, 4, 1) 4%, rgba(117, 10, 10, 1) 51%, rgba(25, 4, 4, 1) 96%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+    overflow-x: hidden;
+    height: 100%;
+
+    color: white;
+}
+
+.background{
+    color: black;
+    width: max-content;
+}
+
+.container-full{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#main{
+    margin-top: 60px;
+    margin-bottom: 120px;
+    width: 99%;
+}
+
+#logo{
+    height: 300px;
+}
+
+.glass-header{
+    
+    background: rgba(255, 255, 255, 0.201);
+    backdrop-filter: blur(10px);             /* blur behind */
+    -webkit-backdrop-filter: blur(10px);     /* safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 0;
+    border-bottom: 2px solid #D47878DE;
+}
+
+
+
+.searchbar{
+    border: 1px;
+    color: #FECACA;
+    background-color: #821010;
+    border-radius: 50px;
+    width: 80%;
+    padding: 12px 18px 12px 45px;
+    background-image: url("./assets/images/loginpage/searchIcon.png");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+}
+
+.searchbar:focus {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 18px;
+    border-radius: 50px;
+    border: 1px solid #FECACA;
+    background-color: #821010;
+    color: #FECACA;
+    background: none;
+}
+
+#main-imgs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+#maintext{
+    font-weight: 800;
+    margin-top: 10px;
+    text-align: center;
+}   
+
+#card_body{
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0);
+    background:none ;
+    border: none;
+    /* backdrop-filter: blur(12px); */
+    /* -webkit-backdrop-filter: blur(12px); */
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0); */
+   
+
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+
+    color: #E2E8F0;
+}
+
+.card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'InriaSans';
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 100;
+    border-radius: 40px;
+    padding: 40px 40px;
+    background-color: #821010;
+    margin: 20px auto;
+    width: 100%;
+    
+}
+
+#card-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background: rgba(255, 255, 255, 0.201);
+    backdrop-filter: blur(10px);             /* blur behind */
+    -webkit-backdrop-filter: blur(10px);     /* safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 30px;
+    border-radius: 40px;
+    background: #750A0AF7;
+    background: linear-gradient(90deg, rgba(117, 10, 10, 1) 16%, rgba(25, 4, 4, 1) 61%);
+}
+
+#login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-input{
+    border: 1px;
+    color: #FECACA;
+    background-color: #821010;
+    border-radius: 50px;
+    width: 130%;
+}
+#signInBtn{
+    border: none;
+    font-size: 24px;
+    padding: 10px 0px;
+    width: 120px;
+    color: #FECACA;
+    background-color: #821010;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+#signInBtn:hover{
+
+    border: none;
+    transition: 0.5s;
+    font-size: 24px;
+    padding: 10px 0px;
+    width: 120px;
+    color: #FECACA;
+    background-color: #dd0808;
+    border-radius: 50px;
+}
+
+.login-input::placeholder{
+    padding: 100px 0px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.footer{
+    margin-top: auto;
+    margin-bottom: 0px;
+    height: 50px;
+    border-top: 2px #D47878DE solid;
+    padding: 10px ;
+}
+
+
+#signup{
+    text-decoration: underline;
+}
+#signup:hover{
+    color: #fd2626;
+}
+
+#logomain{
+    margin-bottom: -20px;
+    margin-top: -30px;
+    width: 100%;
+    height: auto;
+
+}

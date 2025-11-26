@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./loginstyle.css">
+    <link rel="icon" type="image/x-icon" href="/assets/images/mainlogoWhite.png">
+    <title>NeoAccoustics</title>
+</head>
+
+<body>
+
+
+    <div class="container-full">
+
+
+
+        <header class="glass-header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-4 d-flex justify-content-start justify-content-xs-center">
+                        <img src="./assets/images/mainlogoWhite.png" alt="Logo" height="60px">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <input type="text" placeholder="          I AM LOOKING FOR" style="padding: 10px;"
+                            class="searchbar">
+                    </div>
+                    <div class="col-md-2 col-xs-12 d-flex justify-content-end">
+                        <nav class="d-flex gap-4" >
+                            <a href="#">
+                                <img src="./assets/images/questionmark.png" alt="questionmark" width="40px" height="40px">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/images/globe.png" alt="globe" width="40px" height="40px">                                
+                            </a>
+                            <a href="loginPage.html">
+                                <img src="./assets/images/accountlogo.png" alt="acount" width="40px" height="40px">
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main body -->
+
+
+        <div class="row mb-2" id="main">
+
+            <div class="col-sm-12 col-md-7 mb-3" id="main-imgs">
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-12"
+                        style="display: flex; justify-content: center; align-items: center;">
+                        <img src="./assets/images/Logo Large Version.png" alt="Main Logo" width="500px" id="logomain">
+                    </div>
+                    <div class="col-sm-12" style="display: flex; justify-content: center; align-items: center;">
+                        <img src="./assets/images/loginpage/airpods_red_main.png" alt="Airpods" height="250px"
+                            width="250px">
+                    </div>
+                </div>
+
+                <div class="row" id="maintext">
+                    <div class="col-sm-12">THE ART OF PORTABLE SOUND</div>
+                </div>
+
+            
+
+            </div>
+
+            <div class="col-sm-12 col-md-5 col-lg-5" id="card-area">
+
+                <div class="card" style="width: 18rem;" id="card_body">
+                    <h5 class="card-title">Login</h5>
+
+                    <div class="card-body">
+                    </div>
+                    <div class="card-body">
+                        
+                        <div id="login">
+
+                            <input type="email" placeholder="USERNAME" style="padding: 10px;" class="login-input"
+                             value=" " id="email">
+
+                            <input type="password" placeholder="PASSWORD" style="padding: 10px;" class="login-input" id="password">
+
+                            <a href="#">
+                                <button id="signInBtn" onclick="redirectCheck()">Login</button>
+                            </a>
+                            
+                            <span class="text-center d-flex">
+                                New User? <a href="./SignUpPage.html" class="nav-link d-flex text-center" id="signup" style="margin-left: 5px;">Sign up</a> 
+                            </span>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Footer Control -->
+
+        <footer class="footer">
+
+
+            <div class="row">
+
+                <div class="col-sm-12 col-md-6 text-sm-center text-md-start">
+                    <span> &copy;. NeoAccoustics . All Rights Reserved</span>
+                </div>
+
+                <div class="col-sm-12 col-md-6 text-sm-center text-md-end">
+                    <span> By NeoProductions.</span>
+                </div>
+
+            </div>
+
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <script>
+
+        
+        function redirectCheck(){
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            
+            if (email == "admin123@gmail.com" && password == "12345678"){
+                window.location.href = "homepage.html";  
+            }
+            else{
+                window.alert("Incorrect Admin Credentials!")
+            }
+        }
+        
+
+     
+
+    </script>
+</body>
+
+</html>
