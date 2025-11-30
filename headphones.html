@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoAcoustics - Hammer Headphones</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/mainlogoWhite.png">
+    <link rel="stylesheet" href="headphones.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+<header class="header">
+    <div class="header-inner">
+        <img src="./assets/images/mainlogoWhite.png" height="70" alt="Logo">
+        <div class="search-bar">
+            <input type="text" placeholder="I'M LOOKING FOR">
+        </div>
+        <div class="top-icons">
+            <img src="./assets/images/questionmark.png" width="40">
+            <img src="./assets/images/globe.png" width="40">
+            <img src="./assets/images/accountlogo.png" width="40">
+        </div>
+    </div>
+</header>
+
+<nav class="nav-menu">
+    <a href="homePage.html">HOME</a>
+    <a href="category.html">CATEGORY</a>
+    <a href="bestSeller.html">BEST SELLER</a>
+    <a href="cart.html">
+        CART <img src="./assets/images/cart.png" height="24">
+    </a>
+    <a href="#">SUPPORT</a>
+</nav>
+
+<main class="content">
+    <div class="product-detail">
+        <div class="prod-img">
+            <img src="./assets/images/Hammer HeadPhone.png" alt="Hammer Headphones">
+        </div>
+        <div class="prod-info">
+            <h1>Hammer Headphones</h1>
+            
+            <div class="specs">
+                <div>Play-Time <span>50 Hr</span></div>
+                <div>IPX Version <span>5.4</span></div>
+                <div>Voice Driver <span>44mm</span></div>
+                <div>AI Voice Assistant <span>Yes</span></div>
+            </div>
+
+            <div class="price">$169.99</div>
+
+            <button class="add-to-cart" onclick="addToCart()">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div>© 2025. NeoAcoustics . All Rights Reserved.</div>
+    <div>By NEO Productions.</div>
+</footer>
+
+</div>
+
+<script>
+function addToCart() {
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    
+    let existing = cart.find(item => item.name === "Hammer Headphones");
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push({
+            name: "Hammer Headphones",
+            price: 169.99,
+            qty: 1,
+            img: "./assets/images/Hammer HeadPhone.png"
+        });
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert("Hammer Headphones added to cart!");
+}
+</script>
+
+</body>
+</html>
