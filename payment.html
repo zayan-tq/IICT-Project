@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./payment.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/mainlogoWhite.png">
+    <title>NeoAcoustics - Payment</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="header">
+        <div class="header-inner">
+            <img src="./assets/images/mainlogoWhite.png" height="70" alt="Logo">
+            <div class="search-bar">
+                <input type="text" placeholder="I'M LOOKING FOR">
+            </div>
+            <div class="top-icons">
+                <img src="./assets/images/questionmark.png" width="40">
+                <img src="./assets/images/globe.png" width="40">
+                <img src="./assets/images/accountlogo.png" width="40">
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-menu">
+        <a href="homePage.html">HOME</a>
+        <a href="#">CATEGORY</a>
+        <a href="bestSeller.html">BEST SELLER</a>
+        <a href="cart.html">CART <img src="./assets/images/cart.png" height="24"></a>
+        <a href="#">SUPPORT</a>
+    </nav>
+
+    <main class="content payment-content">
+        <h1>Payment</h1>
+
+        <div class="payment-card">
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="email" placeholder="E Mail" required>
+                <input type="text" placeholder="Shipping Address" required>
+
+                <div class="payment-methods">
+                    <label><input type="radio" name="method" value="cod" checked onclick="hideAll()"> COD</label>
+                    <label><input type="radio" name="method" value="card" onclick="showCard()"> Card</label>
+                    <label><input type="radio" name="method" value="others" onclick="showOthers()"> Others</label>
+                </div>
+
+                <div id="cardBox" style="display:none; text-align:center; margin-top:30px;">
+                    <p style="color:#ff9999; margin-bottom:15px;">Select your bank</p>
+                    <label class="opt"><input type="radio" name="bank"> HBL Card</label>
+                    <label class="opt"><input type="radio" name="bank"> ABL Card</label>
+                </div>
+
+                <div id="othersBox" style="display:none; text-align:center; margin-top:30px;">
+                    <p style="color:#ff9999; margin-bottom:15px;">Choose payment app</p>
+                    <label class="opt"><input type="radio" name="wallet"> JazzCash</label>
+                    <label class="opt"><input type="radio" name="wallet"> EasyPaisa</label>
+                </div>
+
+                <button type="submit" class="place-order-btn">Place Order</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div>© 2025. NeoAcoustics . All Rights Reserved.</div>
+        <div>By NEO Productions.</div>
+    </footer>
+</div>
+
+<script>
+function hideAll(){ document.getElementById("cardBox").style.display="none"; document.getElementById("othersBox").style.display="none"; }
+function showCard(){ hideAll(); document.getElementById("cardBox").style.display="block"; }
+function showOthers(){ hideAll(); document.getElementById("othersBox").style.display="block"; }
+</script>
+
+</body>
+</html>

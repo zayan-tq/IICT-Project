@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./cart.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/mainlogoWhite.png">
+    <title>NeoAcoustics - Cart</title>
+</head>
+<body>
+
+<div class="wrapper">
+    
+    <header class="header">
+        <div class="header-inner">
+            <img src="./assets/images/mainlogoWhite.png" height="70" alt="Logo">
+            <div class="search-bar">
+                <input type="text" placeholder="I'M LOOKING FOR">
+            </div>
+            <div class="top-icons">
+                <img src="./assets/images/questionmark.png" width="40">
+                <img src="./assets/images/globe.png" width="40">
+                <img src="./assets/images/accountlogo.png" width="40">
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-menu">
+        <a href="homePage.html">HOME</a>
+        <a href="#">CATEGORY</a>
+        <a href="bestSeller.html">BEST SELLER</a>
+        <a href="cart.html" class="active">
+            CART <img src="./assets/images/cart.png" height="24">
+        </a>
+        <a href="#">SUPPORT</a>
+    </nav>
+
+    <main class="content">
+        <h1>Shopping Cart</h1>
+
+        <div class="product-item">
+            <img src="./assets/images/battlebuds_neo.png" alt="BattleBuds Neo">
+            <div class="product-info">
+                <div class="specs">
+                    <div>Play-Time <span>50 Hr</span></div>
+                    <div>IPV Version <span>5.4</span></div>
+                    <div>Voice Driver <span>44mm</span></div>
+                    <div>AI Voice Assistant</div>
+                </div>
+                <h3>BattleBuds Neo</h3>
+                <div class="qty-price-row">
+                    <div class="quantity">
+                        <button onclick="updateQty(0,-1)">-</button>
+                        <span id="qty0">1</span>
+                        <button onclick="updateQty(0,1)">+</button>
+                    </div>
+                    <div class="price">$149.99</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="./assets/images/Hammer HeadPhone.png" alt="Hammer Headphones">
+            <div class="product-info">
+                <div class="specs">
+                    <div>Play-Time <span>50 Hr</span></div>
+                    <div>IPV Version <span>5.4</span></div>
+                    <div>Voice Driver <span>44mm</span></div>
+                    <div>AI Voice Assistant</div>
+                </div>
+                <h3>Hammer Headphones</h3>
+                <div class="qty-price-row">
+                    <div class="quantity">
+                        <button onclick="updateQty(1,-1)">-</button>
+                        <span id="qty1">1</span>
+                        <button onclick="updateQty(1,1)">+</button>
+                    </div>
+                    <div class="price">$169.99</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary">
+            <div class="subtotal">
+                SubTotal : <span id="total">$319.98</span>
+            </div>
+            <button class="checkout-btn" onclick="location.href='payment.html'">
+                Proceed To Payment
+            </button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div>© 2025. NeoAcoustics . All Rights Reserved.</div>
+        <div>By NEO Productions.</div>
+    </footer>
+</div>
+
+<script>
+    function updateQty(i, val) {
+        let qty = document.querySelectorAll('.quantity span')[i];
+        let n = parseInt(qty.innerText) + val;
+        if (n < 1) n = 1;
+        qty.innerText = n;
+
+        let total = (parseInt(document.querySelectorAll('.quantity span')[0].innerText) * 149.99) +
+                    (parseInt(document.querySelectorAll('.quantity span')[1].innerText) * 169.99);
+        document.getElementById('total').innerText = '$' + total.toFixed(2);
+    }
+</script>
+
+</body>
+</html>
