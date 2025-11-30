@@ -169,6 +169,8 @@ body {
 
 .qty-price-row {
     display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }

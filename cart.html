@@ -51,36 +51,56 @@
 
         <main class="content">
             <h1>Shopping Cart</h1>
-    
-<div class="product-item container-fluid">
-    <div class="row align-items-center">
-
-        <div class="col-12 col-md-4 text-center">
-            <img src="./assets/images/battlebuds_neo.png" class="img-fluid product-img" alt="BattleBuds">
-        </div>
-
-        <div class="col-12 col-md-8 product-info">
-            <div class="specs">
-                <div>Play-Time <span>50 Hr</span></div>
-                <div>IPV Version <span>5.4</span></div>
-                <div>Voice Driver <span>44mm</span></div>
-                <div>AI Voice Assistant</div>
-            </div>
-
-            <h3>BattleBuds Neo</h3>
-
-            <div class="qty-price-row d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-                <div class="quantity">
-                    <button onclick="updateQty(0,-1)">-</button>
-                    <span id="qty0">1</span>
-                    <button onclick="updateQty(0,1)">+</button>
+        <div class="product-item">
+            <img src="./assets/images/battlebuds_neo.png" alt="BattleBuds Neo">
+            <div class="product-info">
+                <div class="specs">
+                    <div>Play-Time <span>50 Hr</span></div>
+                    <div>IPV Version <span>5.4</span></div>
+                    <div>Voice Driver <span>44mm</span></div>
+                    <div>AI Voice Assistant</div>
                 </div>
-                <div class="price">$149.99</div>
+                <h3>BattleBuds Neo</h3>
+                <div class="qty-price-row">
+                    <div class="quantity">
+                        <button onclick="updateQty(0,-1)">-</button>
+                        <span id="qty0">1</span>
+                        <button onclick="updateQty(0,1)">+</button>
+                    </div>
+                    <div class="price">$149.99</div>
+                </div>
             </div>
         </div>
 
-    </div>
-</div>
+        <div class="product-item">
+            <img src="./assets/images/Hammer HeadPhone.png" alt="Hammer Headphones">
+            <div class="product-info">
+                <div class="specs">
+                    <div>Play-Time <span>50 Hr</span></div>
+                    <div>IPV Version <span>5.4</span></div>
+                    <div>Voice Driver <span>44mm</span></div>
+                    <div>AI Voice Assistant</div>
+                </div>
+                <h3>Hammer Headphones</h3>
+                <div class="qty-price-row">
+                    <div class="quantity">
+                        <button onclick="updateQty(1,-1)">-</button>
+                        <span id="qty1">1</span>
+                        <button onclick="updateQty(1,1)">+</button>
+                    </div>
+                    <div class="price">$169.99</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary">
+            <div class="subtotal">
+                SubTotal : <span id="total">$319.98</span>
+            </div>
+            <button class="checkout-btn" onclick="Payment()">
+                Proceed To Payment
+            </button>
+        </div>
 
         </main>
     </div>
