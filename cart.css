@@ -5,9 +5,11 @@
 }
 
 body {
-    background: linear-gradient(#1a0000, #000);
-    color: white;
-    min-height: 100vh;
+    background: #190404B2;
+    background: linear-gradient(90deg, rgba(25, 4, 4, 1) 4%, rgba(117, 10, 10, 1) 51%, rgba(25, 4, 4, 1) 96%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
     font-family: 'Segoe UI', sans-serif;
     display: flex;
     flex-direction: column;
@@ -20,8 +22,68 @@ body {
 }
 
 .header {
-    background: #8B0000;
-    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.201);
+    backdrop-filter: blur(10px);             /* blur behind */
+    -webkit-backdrop-filter: blur(10px);     /* safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 0;
+
+}
+
+.redirectlinks{
+    /* margin-top: 10px; */
+    border-top: 2px solid #D47878DE;
+    background-color: #6B0000;
+    margin-bottom: 20px;
+    height: 110px;
+    border-bottom: 2px solid #D47878DE;
+    
+}
+
+#link{
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+    
+    /* justify-content: space-between; */
+    
+}
+#link nav{
+    justify-content: space-between;
+}
+
+#mainNav{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+
+}
+
+.main-img{
+    max-height: 400px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+
+.img-wrapper {
+    height: 200px; /* Fixed height for image container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.navLinks{
+
+    color: #ffffff;
+}
+.navLinks:hover{
+
+    color: #f56e6e;
+    transition: ease-out 0.4s;
 }
 
 .header-inner {
@@ -33,15 +95,20 @@ body {
 }
 
 .search-bar {
+    
+    border: 1px;
+    color: #FECACA;
+    background-color: #821010;
     flex: 0 1 420px;
     position: relative;
+    border-radius: 50px;
 }
 
 .search-bar input {
     width: 100%;
     padding: 16px 25px 16px 55px;
     border-radius: 50px;
-    background: #a00;
+    background: #821010;
     border: none;
     color: white;
     font-size: 1.2rem;
@@ -189,7 +256,7 @@ body {
 }
 
 .subtotal span {
-    color: #ff6e6e;
+    color: #ffffff;
 }
 
 .checkout-btn {
@@ -212,7 +279,7 @@ body {
 .footer {
     background: #300;
     padding: 35px 100px;
-    border-top: 4px solid #a00;
+    border-top: 2px solid #D47878DE;
     display: flex;
     justify-content: space-between;
     font-size: 1rem;

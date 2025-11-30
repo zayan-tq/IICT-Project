@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NeoAcoustics - Cart</title>
-<link rel="icon" type="image/x-icon" href="./assets/images/mainlogoWhite.png">
-<link rel="stylesheet" href="cart.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./cart.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <title>NeoAcoustics - Cart</title>
 </head>
 <body>
 
 <div class="wrapper">
 
-<header class="header">
-<div class="header-inner">
-<img src="./assets/images/mainlogoWhite.png" height="70" alt="Logo">
-<div class="search-bar">
-<input type="text" placeholder="I'M LOOKING FOR">
-</div>
-<div class="top-icons">
-<img src="./assets/images/questionmark.png" width="40">
-<img src="./assets/images/globe.png" width="40">
-<img src="./assets/images/accountlogo.png" width="40">
-</div>
-</div>
-</header>
+        <div class="redirectlinks d-flex align-items-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <nav id="mainNav">
+                            <a href="homePage.html" class="navLinks active">Home</a>
+                            <a href="#" class="navLinks">CATEGORIES</a>
+                            <a href="bestSeller.html" class="navLinks">BEST SELLER</a>
+                            <a href="#" class="navLinks d-flex align-items-center gap-1 text-danger">
+                                CART <img src="./assets/images/cart.png" alt="" height="18px">
+                            </a>
+                            <a href="supportPage.html" class="navLinks">SUPPORT</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 <nav class="nav-menu">
 <a href="homePage.html">HOME</a>
@@ -50,54 +55,34 @@ Proceed To Payment
 </div>
 </main>
 
-<footer class="footer">
-<div>© 2025. NeoAcoustics . All Rights Reserved.</div>
-<div>By NEO Productions.</div>
-</footer>
+        <div class="summary">
+            <div class="subtotal">
+                SubTotal : <span id="total">$319.98</span>
+            </div>
+            <button class="checkout-btn" onclick="Payment()">
+                Proceed To Payment
+            </button>
+        </div>
+    </main>
 
+    <footer class="footer container-full">
+        <div>© 2025. NeoAcoustics . All Rights Reserved.</div>
+        <div>By NEO Productions.</div>
+    </footer>
 </div>
 
 <script>
-window.onload=()=>{loadCart()}
 
-function loadCart(){
-let cart=JSON.parse(localStorage.getItem('cart')||'[]')
-let items=document.getElementById('cart-items')
-let total=document.getElementById('total')
-if(cart.length==0){
-items.innerHTML='<p style="text-align:center;font-size:2.5rem;margin:100px 0;color:#ff6e6e">Your cart is empty!</p>'
-total.innerText='$0.00'
-return
-}
-let t=0
-let h=''
-cart.forEach((i,x)=>{
-t+=i.price*i.qty
-h+=`
-<div class="product-item">
-<img src="${i.img}" alt="${i.name}">
-<div class="product-info">
-<div class="specs">
-<div>Play-Time <span>50 Hr</span></div>
-<div>IPX Version <span>5.4</span></div>
-<div>Voice Driver <span>44mm</span></div>
-<div>AI Voice Assistant</div>
-</div>
-<h3>${i.name}</h3>
-<div class="qty-price-row">
-<div class="quantity">
-<button onclick="updateQty(${x},-1)">-</button>
-<span>${i.qty}</span>
-<button onclick="updateQty(${x},1)">+</button>
-</div>
-<div class="price">$${(i.price*i.qty).toFixed(2)}</div>
-</div>
-</div>
-</div>`
-})
-items.innerHTML=h
-total.innerText='$'+t.toFixed(2)
-}
+    function Payment(){
+        console.log("Procceding to Payment Page..")
+        window.location.href = 'payment.html';
+    }
+
+    function updateQty(i, val) {
+        let qty = document.querySelectorAll('.quantity span')[i];
+        let n = parseInt(qty.innerText) + val;
+        if (n < 1) n = 1;
+        qty.innerText = n;
 
 function updateQty(i,c){
 let cart=JSON.parse(localStorage.getItem('cart')||'[]')

@@ -21,7 +21,7 @@ body{
 
 
     overflow-x: hidden;
-    height: 100%;
+    min-height: 100vh;
 
     color: white;
 }
@@ -61,6 +61,7 @@ body{
 .redirectlinks{
     /* margin-top: 10px; */
     background-color: #6B0000;
+    margin-bottom: 20px;
     height: 110px;
     border-bottom: 2px solid #D47878DE;
     
@@ -79,16 +80,27 @@ body{
 }
 
 #mainNav{
+
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+
+}
+
+.main-img{
+    max-height: 400px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+
+.img-wrapper {
+    height: 200px; /* Fixed height for image container */
+    display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    
-        border: none;
-
-
-    transition: 0.5s;
-
 }
 
 .navLinks{
@@ -153,6 +165,58 @@ body{
     text-align: center;
 }   
 
+#card_body{
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0);
+    background:none ;
+    border: none;
+    /* backdrop-filter: blur(12px); */
+    /* -webkit-backdrop-filter: blur(12px); */
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0); */
+   
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+
+    color: #E2E8F0;
+}
+
+.card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'InriaSans';
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 100;
+    border-radius: 40px;
+    padding: 40px 40px;
+    background-color: #821010;
+    margin: 20px auto;
+    width: 100%;
+    
+}
+
+
+
+#card-area{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 90%;
+    border: 1px solid #f56e6e;
+  
+    background: rgba(255, 255, 255, 0.201);
+    backdrop-filter: blur(10px);             /* blur behind */
+    -webkit-backdrop-filter: blur(10px);     /* safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 40px;
+    padding-top: 20px;
+    border-radius: 40px;
+    background: #750A0AF7;
+    background: linear-gradient(90deg, rgba(117, 10, 10, 1) 16%, rgba(25, 4, 4, 1) 61%);
+}
 
 #login{
     display: flex;
@@ -227,7 +291,7 @@ body{
 }
 
 .footer{
-    margin-top: auto;
+    margin-top: 50px;
     margin-bottom: 0px;
     height: 50px;
     border-top: 2px #D47878DE solid;
@@ -325,19 +389,21 @@ body{
 
 /* PRODUCT CARD BASE STRUCTURE */
 .productCard {
-background: #190404B2;
-background: linear-gradient(90deg, rgba(25, 4, 4, 1) 1%, rgba(108, 6, 6, 1) 47%, rgba(25, 4, 4, 1) 100%);
-    border-radius: 15px;
-    text-align: center;
-    padding: 15px;
-    
+    background: linear-gradient(145deg, rgba(117, 10, 10, 0.9), rgba(25, 4, 4, 0.9));
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .productCard img {
-    width: 100px;
-    height: 100px;
-
-    border-radius: 10px;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .productCard p {
@@ -371,6 +437,13 @@ background: linear-gradient(90deg, rgba(25, 4, 4, 1) 1%, rgba(108, 6, 6, 1) 47%,
     font-style: italic;
 }
 
+.img-wrapper {
+    height: 200px; /* Fixed height for image container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 
 
 .productRow {
@@ -380,7 +453,7 @@ background: linear-gradient(90deg, rgba(25, 4, 4, 1) 1%, rgba(108, 6, 6, 1) 47%,
     /* gap: 20px; */
 }
 
-#wireless-phones{
-    margin-bottom: 60px;
+#sale-banner{
+    margin-top: 100px;
 }
 
