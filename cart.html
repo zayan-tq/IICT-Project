@@ -10,7 +10,24 @@
 </head>
 <body>
 
-<div class="wrapper">
+
+<div class="">
+    
+    <header class="header">
+        <div class="header-inner">
+            <img src="./assets/images/mainlogoWhite.png" height="70" alt="Logo">
+            <div class="search-bar col-sm-6">
+                <input type="text" placeholder="I'M LOOKING FOR">
+            </div>
+            <div class="top-icons">
+                <img src="./assets/images/questionmark.png" width="40">
+                <img src="./assets/images/globe.png" width="40">
+             <a href="./loginPage.html">
+                 <img src="./assets/images/accountlogo.png" alt="acount" width="40px" height="40px">
+            </a>
+            </div>
+        </div>
+    </header>
 
         <div class="redirectlinks d-flex align-items-center">
             <div class="container-fluid">
@@ -18,9 +35,9 @@
                     <div class="col-12">
                         <nav id="mainNav">
                             <a href="homePage.html" class="navLinks active">Home</a>
-                            <a href="#" class="navLinks">CATEGORIES</a>
+                            <a href="category.html" class="navLinks">CATEGORIES</a>
                             <a href="bestSeller.html" class="navLinks">BEST SELLER</a>
-                            <a href="#" class="navLinks d-flex align-items-center gap-1 text-danger">
+                            <a href="cart.html" class="navLinks d-flex align-items-center gap-1 text-danger">
                                 CART <img src="./assets/images/cart.png" alt="" height="18px">
                             </a>
                             <a href="supportPage.html" class="navLinks">SUPPORT</a>
@@ -30,40 +47,44 @@
             </div>
         </div>
 
-<nav class="nav-menu">
-<a href="homePage.html">HOME</a>
-<a href="category.html">CATEGORY</a>
-<a href="bestSeller.html">BEST SELLER</a>
-<a href="cart.html" class="active">
-CART <img src="./assets/images/cart.png" height="24">
-</a>
-<a href="#">SUPPORT</a>
-</nav>
+    <div class="container">
 
-<main class="content">
-<h1>Shopping Cart</h1>
+        <main class="content">
+            <h1>Shopping Cart</h1>
+    
+<div class="product-item container-fluid">
+    <div class="row align-items-center">
 
-<div id="cart-items"></div>
-
-<div class="summary">
-<div class="subtotal">
-SubTotal : <span id="total">$0.00</span>
-</div>
-<button class="checkout-btn" onclick="location.href='payment.html'">
-Proceed To Payment
-</button>
-</div>
-</main>
-
-        <div class="summary">
-            <div class="subtotal">
-                SubTotal : <span id="total">$319.98</span>
-            </div>
-            <button class="checkout-btn" onclick="Payment()">
-                Proceed To Payment
-            </button>
+        <div class="col-12 col-md-4 text-center">
+            <img src="./assets/images/battlebuds_neo.png" class="img-fluid product-img" alt="BattleBuds">
         </div>
-    </main>
+
+        <div class="col-12 col-md-8 product-info">
+            <div class="specs">
+                <div>Play-Time <span>50 Hr</span></div>
+                <div>IPV Version <span>5.4</span></div>
+                <div>Voice Driver <span>44mm</span></div>
+                <div>AI Voice Assistant</div>
+            </div>
+
+            <h3>BattleBuds Neo</h3>
+
+            <div class="qty-price-row d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <div class="quantity">
+                    <button onclick="updateQty(0,-1)">-</button>
+                    <span id="qty0">1</span>
+                    <button onclick="updateQty(0,1)">+</button>
+                </div>
+                <div class="price">$149.99</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+        </main>
+    </div>
+
 
     <footer class="footer container-full">
         <div>© 2025. NeoAcoustics . All Rights Reserved.</div>
@@ -84,13 +105,10 @@ Proceed To Payment
         if (n < 1) n = 1;
         qty.innerText = n;
 
-function updateQty(i,c){
-let cart=JSON.parse(localStorage.getItem('cart')||'[]')
-cart[i].qty+=c
-if(cart[i].qty<=0)cart.splice(i,1)
-localStorage.setItem('cart',JSON.stringify(cart))
-loadCart()
-}
+        let total = (parseInt(document.querySelectorAll('.quantity span')[0].innerText) * 149.99) +
+                    (parseInt(document.querySelectorAll('.quantity span')[1].innerText) * 169.99);
+        document.getElementById('total').innerText = '$' + total.toFixed(2);
+    }
 </script>
 
 </body>

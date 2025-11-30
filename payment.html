@@ -14,10 +14,12 @@
     <header class="header">
         <div class="header-inner">
             <img src="./assets/images/mainlogoWhite.png" height="70" alt="Logo">
-            <div class="search-bar">
-                <input type="text" placeholder="I'M LOOKING FOR">
-            </div>
-            <div class="top-icons">
+
+                <div class="search-bar">
+                    <input type="text" placeholder="I'M LOOKING FOR">
+                </div>
+   
+            <div class="top-icons col-sm">
                 <img src="./assets/images/questionmark.png" width="40">
                 <img src="./assets/images/globe.png" width="40">
                 <img src="./assets/images/accountlogo.png" width="40">
@@ -31,7 +33,7 @@
                     <div class="col-12">
                         <nav id="mainNav">
                             <a href="homePage.html" class="navLinks active">Home</a>
-                            <a href="#" class="navLinks">CATEGORIES</a>
+                            <a href="category.html" class="navLinks">CATEGORIES</a>
                             <a href="bestSeller.html" class="navLinks">BEST SELLER</a>
                             <a href="cart.html" class="navLinks d-flex align-items-center gap-1 text-danger">
                                 CART <img src="./assets/images/cart.png" alt="" height="18px">
@@ -71,7 +73,7 @@
                     <label class="opt"><input type="radio" name="wallet"> EasyPaisa</label>
                 </div>
 
-                <button type="submit" class="place-order-btn">Place Order</button>
+                <button type="submit" class="place-order-btn" onclick="reDirectHome()">Place Order</button>
             </form>
         </div>
     </main>
@@ -86,6 +88,8 @@
 function hideAll(){ document.getElementById("cardBox").style.display="none"; document.getElementById("othersBox").style.display="none"; }
 function showCard(){ hideAll(); document.getElementById("cardBox").style.display="block"; }
 function showOthers(){ hideAll(); document.getElementById("othersBox").style.display="block"; }
+
+function reDirectHome(){window.location.href = "homePage.html"}
 </script>
 
 </body>

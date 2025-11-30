@@ -14,31 +14,41 @@
 <header class="header">
     <div class="header-inner">
         <img src="./assets/images/mainlogoWhite.png" height="70" alt="Logo">
-        <div class="search-bar">
+        <div class="search-bar col-sm-6">
             <input type="text" placeholder="I'M LOOKING FOR">
         </div>
         <div class="top-icons">
             <img src="./assets/images/questionmark.png" width="40">
             <img src="./assets/images/globe.png" width="40">
-            <img src="./assets/images/accountlogo.png" width="40">
+             <a href="./loginPage.html">
+                 <img src="./assets/images/accountlogo.png" alt="acount" width="40px" height="40px">
+            </a>
         </div>
     </div>
+    
 </header>
-
-<nav class="nav-menu">
-    <a href="homePage.html">HOME</a>
-    <a href="category.html" class="active">CATEGORY</a>
-    <a href="bestSeller.html">BEST SELLER</a>
-    <a href="cart.html">
-        CART <img src="./assets/images/cart.png" height="24">
-    </a>
-    <a href="#">SUPPORT</a>
-</nav>
+        <div class="redirectlinks d-flex align-items-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <nav id="mainNav">
+                            <a href="homePage.html" class="navLinks active">Home</a>
+                            <a href="category.html" class="navLinks">CATEGORIES</a>
+                            <a href="bestSeller.html" class="navLinks">BEST SELLER</a>
+                            <a href="cart.html" class="navLinks d-flex align-items-center gap-1 text-danger">
+                                CART <img src="./assets/images/cart.png" alt="" height="18px">
+                            </a>
+                            <a href="supportPage.html" class="navLinks">SUPPORT</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 <main class="content">
     <h1>CATEGORIES</h1>
 
-    <div class="dobox">
+    <div class="dobox text-wrap">
 
         <div class="box" onclick="location.href='earbuds.html'">
             <img src="./assets/images/battlebuds_neo.png" alt="earbuds">

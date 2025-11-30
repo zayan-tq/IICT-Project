@@ -20,44 +20,65 @@
         <div class="top-icons">
             <img src="./assets/images/questionmark.png" width="40">
             <img src="./assets/images/globe.png" width="40">
-            <img src="./assets/images/accountlogo.png" width="40">
+             <a href="./loginPage.html">
+                 <img src="./assets/images/accountlogo.png" alt="acount" width="40px" height="40px">
+            </a>
         </div>
     </div>
 </header>
 
-<nav class="nav-menu">
-    <a href="homePage.html">HOME</a>
-    <a href="category.html">CATEGORY</a>
-    <a href="bestSeller.html">BEST SELLER</a>
-    <a href="cart.html">
-        CART <img src="./assets/images/cart.png" height="24">
-    </a>
-    <a href="#">SUPPORT</a>
-</nav>
-
-<main class="content">
-    <div class="product-detail">
-        <div class="prod-img">
-            <img src="./assets/images/battlebuds_neo.png" alt="BattleBuds Neo">
+        <div class="redirectlinks d-flex align-items-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <nav id="mainNav">
+                            <a href="homePage.html" class="navLinks active">Home</a>
+                            <a href="category.html" class="navLinks">CATEGORIES</a>
+                            <a href="bestSeller.html" class="navLinks">BEST SELLER</a>
+                            <a href="cart.html" class="navLinks d-flex align-items-center gap-1 text-danger">
+                                CART <img src="./assets/images/cart.png" alt="" height="18px">
+                            </a>
+                            <a href="supportPage.html" class="navLinks">SUPPORT</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="prod-info">
-            <h1>BattleBuds Neo</h1>
-            
-            <div class="specs">
-                <div>Play-Time <span>50 Hr</span></div>
-                <div>IPX Version <span>5.4</span></div>
-                <div>Voice Driver <span>44mm</span></div>
-                <div>AI Voice Assistant <span>Yes</span></div>
+
+
+<main class="content container my-5">
+    <div class="product-item card bg-dark text-white shadow-lg mx-auto" style="max-width: 1200px; border-radius: 2rem;">
+        <div class="row g-0 align-items-center">
+            <!-- Product Image -->
+            <div class="col-12 col-md-4 text-center p-4 prod-img">
+                <img src="./assets/images/battlebuds_neo.png" class="img-fluid product-img" alt="BattleBuds Neo">
             </div>
 
-            <div class="price">$149.99</div>
+            <!-- Product Info -->
+            <div class="col-12 col-md-8 p-4 product-info">
+                <h1>BattleBuds Neo</h1>
 
-            <button class="add-to-cart" onclick="addToCart()">
-                ADD TO CART
-            </button>
+                <div class="specs row mb-4 fs-5">
+                    <div class="col-6 mb-2">Play-Time <span>50 Hr</span></div>
+                    <div class="col-6 mb-2">IPX Version <span>5.4</span></div>
+                    <div class="col-6 mb-2">Voice Driver <span>44mm</span></div>
+                    <div class="col-6 mb-2">AI Voice Assistant <span>Yes</span></div>
+                </div>
+
+                <div class="text-center mb-4 price">
+                    $149.99
+                </div>
+
+                <div class="d-grid">
+                    <button class="add-to-cart btn btn-danger btn-lg rounded-pill fw-bold" onclick="addToCart()">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </main>
+
 
 <footer class="footer">
     <div>© 2025. NeoAcoustics . All Rights Reserved.</div>
@@ -85,6 +106,7 @@ function addToCart() {
     
     localStorage.setItem('cart', JSON.stringify(cart));
     alert("BattleBuds Neo added to cart!");
+    console.log("Working fine");
 }
 </script>
 

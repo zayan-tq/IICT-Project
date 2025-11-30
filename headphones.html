@@ -20,41 +20,57 @@
         <div class="top-icons">
             <img src="./assets/images/questionmark.png" width="40">
             <img src="./assets/images/globe.png" width="40">
-            <img src="./assets/images/accountlogo.png" width="40">
+             <a href="./loginPage.html">
+                 <img src="./assets/images/accountlogo.png" alt="acount" width="40px" height="40px">
+            </a>
         </div>
     </div>
 </header>
 
-<nav class="nav-menu">
-    <a href="homePage.html">HOME</a>
-    <a href="category.html">CATEGORY</a>
-    <a href="bestSeller.html">BEST SELLER</a>
-    <a href="cart.html">
-        CART <img src="./assets/images/cart.png" height="24">
-    </a>
-    <a href="#">SUPPORT</a>
-</nav>
-
-<main class="content">
-    <div class="product-detail">
-        <div class="prod-img">
-            <img src="./assets/images/Hammer HeadPhone.png" alt="Hammer Headphones">
+        <div class="redirectlinks d-flex align-items-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <nav id="mainNav">
+                            <a href="homePage.html" class="navLinks active">Home</a>
+                            <a href="category.html" class="navLinks">CATEGORIES</a>
+                            <a href="bestSeller.html" class="navLinks">BEST SELLER</a>
+                            <a href="cart.html" class="navLinks d-flex align-items-center gap-1 text-danger">
+                                CART <img src="./assets/images/cart.png" alt="" height="18px">
+                            </a>
+                            <a href="supportPage.html" class="navLinks">SUPPORT</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="prod-info">
-            <h1>Hammer Headphones</h1>
-            
-            <div class="specs">
-                <div>Play-Time <span>50 Hr</span></div>
-                <div>IPX Version <span>5.4</span></div>
-                <div>Voice Driver <span>44mm</span></div>
-                <div>AI Voice Assistant <span>Yes</span></div>
+
+
+<main class="content container">
+    <div class="product-item container-fluid">
+        <div class="row align-items-center">
+
+            <div class="col-12 col-md-4 text-center">
+                <img src="./assets/images/Hammer HeadPhone.png" class="img-fluid product-img" alt="Hammer Headphones">
             </div>
 
-            <div class="price">$169.99</div>
+            <div class="col-12 col-md-8 product-info">
+                <h1>Hammer Headphones</h1>
 
-            <button class="add-to-cart" onclick="addToCart()">
-                ADD TO CART
-            </button>
+                <div class="specs">
+                    <div>Play-Time <span>50 Hr</span></div>
+                    <div>IPX Version <span>5.4</span></div>
+                    <div>Voice Driver <span>44mm</span></div>
+                    <div>AI Voice Assistant <span>Yes</span></div>
+                </div>
+
+                <div class="price">$169.99</div>
+
+                <button class="add-to-cart" onclick="addToCart()">
+                    ADD TO CART
+                </button>
+            </div>
+
         </div>
     </div>
 </main>
